@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    "react"
+  ],
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "react/jsx-uses-vars": 1,
+    "space-before-function-paren": 0,
+    "default-case": 0,
+    "require-jsdoc": 0
+  }
+}

@@ -1,0 +1,218 @@
+@import "common.less";
+
+.main-content {
+    display: block;
+    width: 100%;
+    height: calc(100%);
+    background-color: @color_main_bg;
+
+    .action-bar {
+        display: block;
+        height: @dimen_action_height;
+        background: @color_header;
+    }
+
+    .nav {
+        display: block;
+        //height: @dimen_nav_height;
+        text-align: center;
+        padding: @dimen_padding_20 0;
+        background-color: @color_nav_bg;
+        vertical-align: middle;
+
+        .nav-step {
+            display: inline-block;
+            height: 24px;
+            color: @color_nav_text_disable;
+            font-size: @font_text_24;
+
+            &.enable {
+                color: @color_nav_text;
+            }
+
+            &.pass {
+                color: @color_nav_text_pass;
+            }
+        }
+
+        .nav-indicator {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url('../image/nav_indicator.png') no-repeat;
+            margin: 0 48px;
+        }
+    }
+
+    .step1, .step2 {
+        padding: @dimen_padding_42 @dimen_padding_20;
+
+        .title {
+            display: block;
+            color: @color_nav_text;
+            font-size: @font_text_28;
+        }
+
+        .sub-title{
+            display: block;
+            color: @color_nav_text_disable;
+            font-size: @font_text_24;
+            margin-top: @dimen_padding_text;
+        }
+
+        .upload-photo {
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            width: 100%;
+            height: @dimen_photo_height;
+            border-radius: 6px;
+            border: 1px solid @color_input_outline;
+            background-color: @color_input_bg;
+            margin: @dimen_padding_28 0;
+            overflow: hidden;
+
+            .photo-input {
+                display: none;
+            }
+
+            .upoad-photo-btn {
+                display: inline-block;
+                width: 112px;
+                height: 94px;
+                background: url('../image/upload_photo.png') no-repeat;
+            }
+
+            .show-photo {
+                display: inline-block;
+                height: @dimen_photo_height;
+                margin: 0 auto;
+            }
+        }
+
+        .reminder {
+            display: block;
+            color: @color_input_text_placeholder;
+            font-size: @font_text_21;
+
+            .upoad-photo-btn {
+                display: inline-block;
+                background: @color_button_disable;
+                border-radius: 6px;
+                color: @color_button_text;
+                padding: @dimen_padding_text;
+            }
+        }
+
+        .info-form {
+            display: block;
+            margin: @dimen_padding_28 0;
+
+            .input-area {
+                display: block;
+                position: relative;
+                margin: 0 0 @dimen_padding_42 0;
+
+                .labels {
+                    display: none;
+                    position: absolute;
+                    top: @dimen_padding_text_large;
+                    left: @dimen_padding_20;
+                    color: @color_input_text_placeholder;
+                    font-size: @font_text_21;
+
+                    &.show {
+                        display: inline-block;
+                    }
+                }
+
+                input{
+                    width: 100%;
+                    height: @dimen_nav_height;
+                    background: @color_input_bg;
+                    border-radius: 6px;
+                    outline: 1px solid @color_input_outline;
+                    font-size: @font_text_24;
+                    text-indent: @dimen_padding_20;
+                    color: @color_input_text_placeholder;
+
+                    &.bold {
+                        color: @color_nav_text;
+                        padding-top: @dimen_padding_text_large;
+                        font-size: @font_text_28;
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+                    height: @dimen_textarea_height;
+                    background: @color_input_bg;
+                    border-radius: 6px;
+                    outline: 1px solid @color_input_outline;
+                    font-size: @font_text_24;
+                    text-indent: @dimen_padding_20;
+                    color: @color_input_text_placeholder;
+
+                    &.bold {
+                        color: @color_nav_text;
+                        padding-top: @dimen_padding_36;
+                        font-size: @font_text_28;
+                    }
+                }
+
+                .warning {
+                    display: block;
+                    color: @color_text_warning;
+                    font-size: @font_text_21;
+                    margin-top: @dimen_padding_text;
+
+
+                    &.hidden {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .next-step {
+            display: block;
+            position:absolute;
+            width: 100%;
+            box-sizing: border-box;
+            bottom:0px;
+            left: 0px;
+            padding: @dimen_padding_20 @dimen_padding_20;
+
+            .next-step-btn {
+                width: 100%;
+                height: @dimen_button_height;
+                background-color: @color_button_disable;
+                color: @color_button_text;
+                font-size: @font_text_24;
+                border-radius: 6px;
+
+                &.enable {
+                    background-color: @color_button_enable;
+                }
+            }
+        }
+    }
+
+    .step3 {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width: 100%;
+
+        .result-content {
+            display: block;
+            color: @color_nav_text;
+            font-size: @font_text_28;
+            margin: @dimen_padding_42 0;
+        }
+
+        &.hidden {
+            display: none;
+        }
+    }
+}
