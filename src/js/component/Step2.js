@@ -24,7 +24,7 @@ class Step2 extends BaseComponent {
         let st = this.state;
 
         return (
-            <div className={cns("step2", this.props.visible === Constants.visibleHide && "hidden")}>
+            <div className={cns("step2", this.props.visible === Constants.visibleHide ? "hidden" : "slide")}>
                 <span className="title">Your Contact Information</span>
                 <span className="sub-title">Fill in the following details</span>
                 <form className="info-form">
@@ -58,7 +58,6 @@ class Step2 extends BaseComponent {
 
     shouldComponentUpdate(nextProps, nextState) {
         let flag = false;
-        console.log(nextState);
 
         if (nextState.firstName !== '' && nextState.firstName !== '-0'
             && nextState.lastName !== '' && nextState.lastName !== '-0'
@@ -88,8 +87,6 @@ class Step2 extends BaseComponent {
 
     _checkInput(e) {
         let currentEle = e.currentTarget;
-        console.log(e.currentTarget.getAttribute('name'));
-        console.log(e.currentTarget.value);
 
         if (currentEle && currentEle.getAttribute('name')) {
             switch (currentEle.getAttribute('name')) {

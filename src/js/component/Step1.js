@@ -37,7 +37,7 @@ class Step1 extends BaseComponent {
         }
 
         return(
-            <div className={cns("step1", this.props.visible === Constants.visibleHide && "hidden")}>
+            <div className={cns("step1", this.props.visible === Constants.visibleHide ? "hidden" : "slide")}>
                 <span className="title">Upload Photo</span>
                 <div className="upload-photo">
                     {uploadSection}
