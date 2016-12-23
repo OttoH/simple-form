@@ -6,8 +6,8 @@ import cns from '../ClassName.js';
 import {Constants} from '../Constants.js';
 
 class Step3 extends BaseComponent {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
     render() {
         return (
