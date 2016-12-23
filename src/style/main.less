@@ -2,6 +2,7 @@
 
 .main-content {
     display: block;
+    position: relative;
     width: 100%;
     height: calc(100%);
     background-color: @color_main_bg;
@@ -40,12 +41,12 @@
             width: 24px;
             height: 24px;
             background: url('../image/nav_indicator.png') no-repeat;
-            margin: 0 48px;
+            margin: 0 @dimen_padding_20;
         }
     }
 
     .step1, .step2 {
-        padding: @dimen_padding_42 @dimen_padding_20;
+        padding: @dimen_padding_42 @dimen_padding_20 @dimen_button_height @dimen_padding_20;
 
         .title {
             display: block;
@@ -176,12 +177,10 @@
 
         .next-step {
             display: block;
-            position:absolute;
             width: 100%;
             box-sizing: border-box;
-            bottom:0px;
-            left: 0px;
-            padding: @dimen_padding_20 @dimen_padding_20;
+            margin-top: calc(100% - @dimen_button_height);
+            // padding: @dimen_padding_20 @dimen_padding_20;
 
             .next-step-btn {
                 width: 100%;
