@@ -6,3 +6,4 @@ simple form of reactjs
 $ npm run setup
 $ npm run build
 ```
+open build/index.html
