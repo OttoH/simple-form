@@ -11,7 +11,7 @@ class Step3 extends BaseComponent {
     }
     render() {
         return (
-            <div className={cns("step3", this.props.visible === Constants.visibleHide && "hidden")}>
+            <div className="step3">
                 <span className="result-content">Complete.</span>
             </div>
         );

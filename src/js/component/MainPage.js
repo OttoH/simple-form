@@ -33,9 +33,15 @@ class MainPage extends BaseComponent {
 					<span className = "nav-indicator"></span>
 					<span className = {cns("nav-step", (stp > 1 && "pass"))}>Step3</span>
 				</div>
-				<Step1 visible={(stp === 0) ? Constants.visibleView : Constants.visibleHide} getPassStep={this._getPassStep} />
-				<Step2 visible={(stp === 1) ? Constants.visibleView : Constants.visibleHide} getPassStep={this._getPassStep} />
-				<Step3 visible={(stp === 2) ? Constants.visibleView : Constants.visibleHide} getPassStep={this._getPassStep} />
+				<div className={cns("page", (stp === 0) && "on", (stp > 0) && "pass")}>
+					<Step1 getPassStep={this._getPassStep} />
+				</div>
+				<div className={cns("page", (stp === 1) && "on", (stp > 1) && "pass")}>
+					<Step2 getPassStep={this._getPassStep} />
+				</div>
+				<div className={cns("page", (stp === 2) && "on")}>
+					<Step3 getPassStep={this._getPassStep} />
+				</div>
 			</div>
 		);
 	}

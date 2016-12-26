@@ -24,7 +24,7 @@ class Step2 extends BaseComponent {
         let st = this.state;
 
         return (
-            <div className={cns("step2", this.props.visible === Constants.visibleHide ? "hidden" : "slide")}>
+            <div className="step2">
                 <span className="title">Your Contact Information</span>
                 <span className="sub-title">Fill in the following details</span>
                 <form className="info-form">

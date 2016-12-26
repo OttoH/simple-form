@@ -6,6 +6,8 @@
     width: 100%;
     height: calc(100%);
     background-color: @color_main_bg;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     .action-bar {
         display: block;
@@ -43,6 +45,25 @@
             background: url('../image/nav_indicator.png') no-repeat;
             margin: 0 @dimen_padding_20;
         }
+    }
+
+    .page {
+        min-width: 100%;
+	    height: 100%;
+	    margin-left: 100%;
+	    position: absolute;
+        background-color: @color_main_bg;
+        z-index: 1000;
+        transition: margin .4s ease-in-out;
+
+        &.on{
+            margin-left: 0%;
+        }
+
+        &.pass{
+            margin-left: -100%;
+        }
+
     }
 
     .step1, .step2 {
@@ -208,10 +229,6 @@
             color: @color_nav_text;
             font-size: @font_text_28;
             margin: @dimen_padding_42 0;
-        }
-
-        &.hidden {
-            display: none;
         }
     }
 }
