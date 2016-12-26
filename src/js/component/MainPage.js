@@ -2,6 +2,7 @@
 
 import React from 'react';
 import BaseComponent from './BaseComponent.js';
+import ReactDOM from 'react-dom';
 import cns from '../ClassName.js';
 import {Constants} from '../Constants.js';
 
@@ -46,8 +47,13 @@ class MainPage extends BaseComponent {
 		);
 	}
 
+	componentDidUpdate() {
+	  let node = ReactDOM.findDOMNode(this);
+	  node.scrollTop = 0;
+	}
+
 	_getPassStep(res) {
-		var concatStep = this.state.step;
+		let concatStep = this.state.step;
 		concatStep.push(res);
 		this.setState({
 			step: concatStep

@@ -2,7 +2,7 @@
     "name": "Basic prototype Web App",
     "short_name": "UX Challenge",
     "icons": [{
-        "src": "/images/icon.png",
+        "src": "/images/icon_manifest.png",
         "type": "image/png",
         "sizes": "192x192"
     }],

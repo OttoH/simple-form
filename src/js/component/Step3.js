@@ -9,6 +9,7 @@ class Step3 extends BaseComponent {
     constructor(props) {
         super(props);
     }
+
     render() {
         return (
             <div className="step3">
